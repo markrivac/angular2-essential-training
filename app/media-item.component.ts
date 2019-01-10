@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+// We can import multiple decorators from same module
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'mw-media-item',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['app/media-item.component.css']
 })
 export class MediaItemComponent {
+
+  @Input() mediaItem;
+
   onDelete() {
     console.log('deleted');
   }
